@@ -1,18 +1,22 @@
 <!DOCTYPE html>
+<!-- Projeto -->
 <html>
   <head>
     <title> Exemplo basico </title>
+    <!-- importa a biblioteca do a-frame -->
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
   </head>
+  <!-- corpo da pagina -->
 <body>
-  <a-scene>
+  <a-scene vr-mode-ui="false">
     
-  <a-assets>
-  <a-box position="0 0 -4" rotation="0 45 0" color="blue"></a-box>
-  <a-camera position="0 1.6 0"> </a-camera>
-    
+    <a-assets>
+      <!-- gerenciador de arquivos -->
+
   </a-assets>
-      
+      <a-box position="0 0 -4" rotation="0 45 0" color="blue"></a-box>
+      <!-- camera do usuario -->
+      <a-camera position="0 1.6 0"> </a-camera>
   </a-scene>
 </body>
 </html>
