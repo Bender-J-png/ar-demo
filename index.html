@@ -8,7 +8,7 @@
   </head>
   <!-- corpo da pagina -->
 <body>
-  <a-scene mindar-image="imageTargetSrc: ;"
+  <a-scene mindar-image="imageTargetSrc: targets.mind;"
             device-orientation-device-ui="enabled"
             vr-mode-ui="false">
     
@@ -21,10 +21,10 @@
     <a-camera user-camera look-controls="enabled:false"> </a-camera>
 
       <!-- Marcador -->
-      <a-entity id="marcador" mindar-image-target="targetIndex=0">
+      <a-entity id="marcador" mindar-image-target="targetIndex=1">
 
         <!-- Modelo 3D -->
-        <a-entity gltf-model="#modelo3d" position="0 0 0.2" scale="1 1 1"></a-entity>
+        <a-entity gltf-model="#modelo3d" position="0 0 0.2" scale="0.1 0.1 0.1"></a-entity>
         
       </a-entity>
     
