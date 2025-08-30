@@ -3,24 +3,31 @@
 <html>
   <head>
     <title> MuRAL Web </title>
-    <!-- importa a biblioteca do a-frame -->
-    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <!-- corpo da pagina -->
 <body>
-  <a-scene vr-mode-ui="false">
+  <a-scene mindar-image="imageTargetSrc: ;"
+            device-orientation-device-ui="enabled"
+            vr-mode-ui="false">
     
     <!-- Gerenciador de arquivos -->
     <a-assets>
       <a-asset-item id="modelo3d" src="parabolide_hiperbolico.glb"></a-asset-item>  
     </a-assets>
-
-    <!-- Modelo 3D -->
-    <a-entity gltf-model="#modelo3d" position="0 0 -4" scale="1 1 1"></a-entity>
-  
+    
     <!-- Camera do usuario -->
-    <a-camera position="0 1.6 0"> </a-camera>
+    <a-camera user-camera look-controls="enabled:false"> </a-camera>
+
+      <!-- Marcador -->
+      <a-entity id="marcador" mindar-image-target="targetIndex=0">
+
+        <!-- Modelo 3D -->
+        <a-entity gltf-model="#modelo3d" position="0 0 0.2" scale="1 1 1"></a-entity>
+        
+      </a-entity>
+    
   </a-scene>
 </body>
 </html>
